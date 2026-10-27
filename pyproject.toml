@@ -1,0 +1,48 @@
+[build-system]
+requires = ["hatchling>=1.27"]
+build-backend = "hatchling.build"
+
+[project]
+name = "governance-gateway"
+version = "0.1.1"
+description = "Deadline-aware governance checks for AI agents, as an MCP server: a personal-data scan that always runs and a safety classifier that runs only when it can finish in time."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT AND CC-BY-NC-4.0"
+license-files = ["LICENSE", "LICENSE-DATA.md"]
+authors = [{ name = "Tanishq S Prabhu" }]
+keywords = ["mcp", "model-context-protocol", "guardrails", "governance", "gdpr", "pii",
+            "ai-agents", "claude", "llm-safety"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Security",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = ["mcp>=2.3"]
+
+[project.urls]
+Homepage = "https://github.com/tanishq-ctrl/governance-gateway"
+Repository = "https://github.com/tanishq-ctrl/governance-gateway"
+Issues = "https://github.com/tanishq-ctrl/governance-gateway/issues"
+Changelog = "https://github.com/tanishq-ctrl/governance-gateway/blob/main/CHANGELOG.md"
+
+[project.scripts]
+governance-gateway = "governance_gateway.server:main"
+governance-gateway-hook = "governance_gateway.hook:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/governance_gateway"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src", "tests", "README.md", "LICENSE", "LICENSE-DATA.md", "CHANGELOG.md", "server.json"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.tanishq-ctrl/governance-gateway",
+  "title": "Governance Gateway",
+  "description": "Deadline-aware governance for AI agents: PII scan always, safety check if it fits the deadline",
+  "repository": {
+    "url": "https://github.com/tanishq-ctrl/governance-gateway",
+    "source": "github"
+  },
+  "version": "0.1.1",
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "governance-gateway",
+      "version": "0.1.1",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
+}

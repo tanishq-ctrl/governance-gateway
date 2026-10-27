@@ -1,0 +1,7 @@
+{
+  "name": "governance-guard",
+  "version": "0.1.0",
+  "description": "Deadline-aware governance for an AI agent: every command, file write or web request is checked for personal data (always) and harmful content (when time allows) before it runs.",
+  "author": { "name": "Tanishq S Prabhu" },
+  "keywords": ["governance", "guardrail", "gdpr", "pii", "deadline", "mcp"]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "governance-gateway",
+  "description": "Deadline-aware governance for AI agents, from the Governance Speed Lag project",
+  "owner": { "name": "Tanishq S Prabhu" },
+  "plugins": [
+    {
+      "name": "governance-guard",
+      "source": "./governance-guard",
+      "description": "A deadline-aware governance gateway for AI agents: MCP tools plus a hook that checks every action before it runs"
+    }
+  ]
+}
